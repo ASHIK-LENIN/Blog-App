@@ -5,9 +5,13 @@ import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
 import Projects from "./pages/Projects"
 import Dashboard from "./pages/Dashboard"
+import Header from "./components/Header"
 
 const App = () => {
   return (
+    <>
+   
+    <Header />
     <Routes>
       <Route  path="/" element={ <Home />}/>
       <Route  path="/about" element={ <About />}/>
@@ -16,6 +20,7 @@ const App = () => {
       <Route  path="/projects" element={ <Projects />}/>
       <Route  path="/dashboard" element={ <Dashboard />}/>
     </Routes>
+    </>
   )
 }
 
