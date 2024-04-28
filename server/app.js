@@ -1,11 +1,15 @@
 const express = require('express');
 const connectDB = require('./DB/connect');
 require('dotenv').config();
+const testRoute = require('./routes/user.route.js')
+
 
 const app = express();
 const port = 7000;
 
+app.use(express.json());
 
+app.use('/api/v2',testRoute);
 
 
 const start = async () => {
