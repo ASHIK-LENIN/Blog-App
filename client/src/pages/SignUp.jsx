@@ -33,9 +33,9 @@ const SignUp = () => {
         return setErrorMessage(data.message);
       }
       setLoading(false);
-      if(res.ok){
+      
         navigate('/sign-in')
-      }
+      
     } catch (error) {
       setErrorMessage(error.message);
       setLoading(false);
@@ -91,7 +91,7 @@ const SignUp = () => {
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Have an account ?</span>
-            <Link to='/sign-up' className='text-blue-600'>
+            <Link to='/sign-in' className='text-blue-600'>
               Sign In
             </Link>
           </div>
